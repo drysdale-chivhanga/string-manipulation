@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drysdale-string-manipulation", "drysdale-string-manipulation\drysdale-string-manipulation.csproj", "{1550466A-A3E4-485F-B27F-724B79DACBC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quick-console-ui-tester", "quick-console-ui-tester\quick-console-ui-tester.csproj", "{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1550466A-A3E4-485F-B27F-724B79DACBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1550466A-A3E4-485F-B27F-724B79DACBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1550466A-A3E4-485F-B27F-724B79DACBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
