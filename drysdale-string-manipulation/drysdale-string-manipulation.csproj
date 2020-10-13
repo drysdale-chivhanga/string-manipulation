@@ -1,9 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Drysdale.String.Manipulation</RootNamespace>
     <AssemblyName>Drysdale.String.Manipulation</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.8</Version>
+    <Description>A general-simple library for string manipulation functions by Drysdale Chivhanga</Description>
+    <Authors>Drysdale Chivhanga</Authors>
+    <Company>Sterp</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/drysdale-chivhanga/string-manipulation</PackageProjectUrl>
+    <PackageIcon>SterpLogo-Ewb.png</PackageIcon>
+    <PackageReleaseNotes>Stand-alone version with an accessible/public github repository
+## This will be the alternative Drysdale.StringManipulation</PackageReleaseNotes>
+  
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Drysdale.Number.Manipulation" Version="1.0.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\SterpLogo-Ewb.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
