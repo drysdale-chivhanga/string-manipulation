@@ -1,5 +1,6 @@
 ﻿namespace Drysdale.String.Manipulation
 {
+    #region Enumeration.Charactor-Distinction...
     /// <summary>
     /// Enumeration.Charactor-Distinction
     /// </summary>
@@ -14,4 +15,39 @@
         /// </summary>
         CapitalAndSmallAreTwo
     }
+    #endregion
+
+    #region Enumeration.Charactor-Type...
+    /// <summary>
+    /// Enumeration.Charactor-Type
+    /// </summary>
+    public enum CharactorType
+    {
+        /// <summary>
+        /// PositiveInteger
+        /// </summary>
+        PositiveInteger,
+        /// <summary>
+        /// AlphabetLetter
+        /// </summary>
+        AlphabetLetter
+    }
+    #endregion
+
+    #region Enumeration.Charactor-Case...
+    /// <summary>
+    /// Enumeration.Charactor-Case
+    /// </summary>
+    public enum CharactorCase
+    {
+        /// <summary>
+        /// Upper-Case-Letter
+        /// </summary>
+        Upper,
+        /// <summary>
+        /// Lower-Case-Letter
+        /// </summary>
+        Lower
+    }
+    #endregion
 }

@@ -33,21 +33,6 @@ namespace Drysdale.String.Manipulation
         /// Static-Method.Get-Distinct-Chars-Without-Spaces Version-01
         /// </summary>
         /// <param name="incVal">The Incoming-String-Value</param>
-        /// <returns>The Non-Spaced-String-With-Distinct-Charactors</returns>
-        /// <remarks>NB* Capital-letters and their respective small letters are different charactors.<br/>
-        /// For example Capital 'D' and small 'd' are different charactors</remarks>
-        public static string GetDistinctWithoutSpacesV01(string incVal)
-        {
-            string stringWithZeroSpaces = string.Concat(incVal.Where(c => !char.IsWhiteSpace(c)));
-            return new string(stringWithZeroSpaces.Distinct().ToArray());
-        }
-        #endregion
-
-        #region Static-Method.Get-Distinct-Chars-Without-Spaces...
-        /// <summary>
-        /// Static-Method.Get-Distinct-Chars-Without-Spaces Version-01
-        /// </summary>
-        /// <param name="incVal">The Incoming-String-Value</param>
         /// <param name="incDis">The Incoming-Charactor.Distinction-Value</param>
         /// <returns>The Non-Spaced-String-With-Distinct-Charactors</returns>
         /// <remarks>
@@ -161,34 +146,85 @@ namespace Drysdale.String.Manipulation
         /// <param name="sizeOfString">The Incoming-Required-Size-Of-String-Value</param>
         /// <param name="incVal">The String-To-Choose-From-Value</param>
         /// <returns>The Randomly-Chosen-Charactors</returns>
+        /// <remarks>If Length of </remarks>
         public static string GetCharactors(int sizeOfString, string incVal)
         {
-
-
-            int i = 0;
-            StringBuilder rndmChars = new StringBuilder();
-            List<char> requiredCharactors = new List<char>(sizeOfString);
-
-            while (i < sizeOfString)
+            string distinctValue = GetDistinctWithoutSpaces(incVal, CharactorDistinction.CapitalAndSmallAreTwo);
+            int distinctLength = distinctValue.Length;
+            string response="";
+            if (distinctLength > sizeOfString)
             {
-                char thisChar = GetCharactor(incVal);
-                if (requiredCharactors.Contains(thisChar))
+                int i = 0;
+                while (i < sizeOfString)
                 {
-                    continue;
+                    char thisChar = GetCharactor(incVal);
+                    if (response.Contains(thisChar))
+                        continue;
+                    response.Append(thisChar);
+                    i++;
                 }
-                requiredCharactors.Add(thisChar);
-                rndmChars.Append(thisChar.ToString());
-                i++;
             }
-            return rndmChars.ToString();
+            else
+            {
+                if (distinctLength == sizeOfString)
+                    response = distinctValue;
+                else
+                {
+                    int remainingChars = sizeOfString - distinctLength;
+                    foreach (char item in distinctValue)
+                    {
+                        response.Append(item);
+                    }
+                    int i = 0;
+                    while (i<remainingChars)
+                    {
+                        char thisChar = GetGetRandomLetter(CharactorCase.Lower);
+                        if (response.Contains(thisChar))
+                            continue;
+                        response.Append(thisChar);
+                        i++;
+                    }
+                }
+            }
+            return response;
         }
+
+
+        #endregion
+
+        #region Static-Method.Get-Random Alphabet-Letter...
+        /// <summary>
+        /// Static-Method.Get-Random Alphabet-Letter
+        /// </summary>
+        /// <param name="incVal">The Incoming-Desired-Case-For-Charactor-Value</param>
+        /// <returns>The Generated-Random Alphabet-Letter</returns>
+        /// <remarks>
+        /// Enumeration.Description<br/>
+        /// ---------------------------<br/>
+        /// ---------------------------<br/>
+        /// <br/><br/>
+        /// CharactorCase.Lower<br/>
+        /// ---------------------------------------------------------------<br/>
+        /// Returns a lower-case aplhabet letter from 'a-z' inclusive<br/>
+        /// ---------------------------------------------------------------<br/>
+        ///  CharactorCase.Upper.<br/>
+        /// ---------------------------------------------------------------<br/>
+        /// Returns a lower-case aplhabet letter from 'A-Z' inclusive<br/>
+        /// ---------------------------------------------------------------<br/>
+        /// </remarks>
+        public static char GetGetRandomLetter(CharactorCase incVal) => incVal switch
+        {
+
+            CharactorCase.Upper => Convert.ToChar(NumberManip.GetNumber(65, 91)),
+            _ => Convert.ToChar(NumberManip.GetNumber(97, 123)),
+        };
         #endregion
 
         #region Static-Method.GetRandomCharactor...
         /// <summary>
         /// Static-Method.GetRandomCharactor
         /// </summary>
-        public static char GetCharactor(string charactors) => charactors[NumberManip.GetNumber(0, charactors.Length - 1)];
+        public static char GetCharactor(string charactors) => charactors[NumberManip.GetNumber(0, charactors.Length)];
         #endregion
 
         #region Static-Method.ShuffleGivenString
