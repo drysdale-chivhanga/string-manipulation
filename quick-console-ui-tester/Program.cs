@@ -12,7 +12,7 @@ namespace quick_console_ui_tester
                 throw new ArgumentNullException(nameof(args));
             }
 
-            string code = "Drysdale Chivhanga";
+            //string code = "Drysdale Chivhanga";
 
             Console.WriteLine(StringManip.GetGetRandomLetter(CharactorCase.Lower));
         }
