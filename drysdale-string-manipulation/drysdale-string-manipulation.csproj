@@ -25,13 +25,13 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Drysdale.Number.Manipulation" Version="1.0.7" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\..\SterpLogo-Ewb.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Drysdale.NumberManipulation" Version="1.0.8" />
   </ItemGroup>
 
 </Project>
