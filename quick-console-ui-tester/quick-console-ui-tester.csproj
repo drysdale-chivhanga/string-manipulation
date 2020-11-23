@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\drysdale-string-manipulation\drysdale-string-manipulation.csproj" />
+    <PackageReference Include="Drysdale.StringManipulation" Version="1.1.1" />
   </ItemGroup>
 
 </Project>
