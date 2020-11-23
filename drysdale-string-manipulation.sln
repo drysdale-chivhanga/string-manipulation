@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "drysdale-string-manipulation", "drysdale-string-manipulation\drysdale-string-manipulation.csproj", "{1550466A-A3E4-485F-B27F-724B79DACBC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "drysdale-string-manipulation", "drysdale-string-manipulation\drysdale-string-manipulation.csproj", "{1550466A-A3E4-485F-B27F-724B79DACBC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quick-console-ui-tester", "quick-console-ui-tester\quick-console-ui-tester.csproj", "{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "quick-console-ui-tester", "quick-console-ui-tester\quick-console-ui-tester.csproj", "{7917E2A5-64C6-4E7B-A212-2FA2B7ADB3FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

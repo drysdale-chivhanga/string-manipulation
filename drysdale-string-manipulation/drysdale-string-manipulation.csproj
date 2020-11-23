@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+  <TargetFramework>netstandard2.0</TargetFramework>    
     <RootNamespace>Drysdale.String.Manipulation</RootNamespace>
     <AssemblyName>Drysdale.String.Manipulation</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.8</Version>
+    <Version>1.1.0</Version>
     <Description>A general-simple library for string manipulation functions by Drysdale Chivhanga</Description>
     <Authors>Drysdale Chivhanga</Authors>
     <Company>Sterp</Company>
@@ -13,7 +13,12 @@
     <PackageProjectUrl>https://github.com/drysdale-chivhanga/string-manipulation</PackageProjectUrl>
     <PackageIcon>SterpLogo-Ewb.png</PackageIcon>
     <PackageReleaseNotes>Stand-alone version with an accessible/public github repository
-## This will be the alternative Drysdale.StringManipulation</PackageReleaseNotes>
+## This is now based on standrd classlibrary</PackageReleaseNotes>
+    <PackageId>Drysdale.StringManipulation</PackageId>
+    <Product>Drysdale.StringManipulation</Product>
+    <RepositoryUrl>https://github.com/drysdale-chivhanga/string-manipulation</RepositoryUrl>
+    <PackageTags>string</PackageTags>
+    <LangVersion>8.0</LangVersion>
   
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
