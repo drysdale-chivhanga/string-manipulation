@@ -5,7 +5,7 @@
     <RootNamespace>Drysdale.StringManipulation</RootNamespace>
     <AssemblyName>Drysdale.StringManipulation</AssemblyName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <Description>A general-simple library for string manipulation functions by Drysdale Chivhanga</Description>
     <Authors>Drysdale Chivhanga</Authors>
     <Company>Sterp</Company>
@@ -13,12 +13,11 @@
     <PackageProjectUrl>https://github.com/drysdale-chivhanga/string-manipulation</PackageProjectUrl>
     <PackageIcon>SterpLogo-Ewb.png</PackageIcon>
     <PackageReleaseNotes>Stand-alone version with an accessible/public github repository
-## This is now based on Standard-Class-Library
-## Removed one of the dots in the namespace</PackageReleaseNotes>
+## Added GetRandom08AlphaNumerals</PackageReleaseNotes>
     <PackageId>Drysdale.StringManipulation</PackageId>
     <Product>Drysdale.StringManipulation</Product>
     <RepositoryUrl>https://github.com/drysdale-chivhanga/string-manipulation</RepositoryUrl>
-    <PackageTags>string</PackageTags>
+    <PackageTags>string, manipulation</PackageTags>
     <LangVersion>8.0</LangVersion>
   
   </PropertyGroup>

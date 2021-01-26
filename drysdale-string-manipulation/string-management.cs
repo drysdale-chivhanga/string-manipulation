@@ -361,6 +361,43 @@ namespace Drysdale.String.Manipulation
             sVal = splittedValue[1];
         }
         #endregion
+
+        #region GetRandom08AlphaNumerals...
+        /// <summary>
+        /// GetRandom08AlphaNumerals
+        /// </summary>
+        /// <remarks>
+        /// Can Be Used To Get A Random 8 Letter Password
+        /// </remarks>
+        public static string GetRandom08AlphaNumerals
+        {
+            get
+            {
+                string drysChiv = $"{Fzd_Def_String.GetFirstNameChars}{Fzd_Def_String.GetSurnameChars}";
+                string threeLetaz = GetCharactors(3, drysChiv);
+                int fiveDigits = NumberManip.GetNumber(10000, 99999);
+                string fullDummyPassword = $"{fiveDigits}{GetCapitalLetters(threeLetaz)}";
+                return GetShuffledString(fullDummyPassword);
+            }
+        }
+        #endregion
+
+        #region GetCapitalLetters...
+        /// <summary>
+        /// GetCapitalLetters
+        /// </summary>
+        /// <param name="smallLetters"></param>
+        /// <returns></returns>
+        public static string GetCapitalLetters(string smallLetters)
+        {
+            int numLetters = smallLetters.Length;
+            int lettersToBeCaps = NumberManip.GetNumber(1, numLetters);
+            string targetedSubstring = smallLetters.Substring(0, lettersToBeCaps);
+            string nonTargeted = smallLetters.Substring(lettersToBeCaps);
+
+            return $"{nonTargeted}{targetedSubstring.ToUpper()}";
+        }
+        #endregion
     }
     #endregion
 }
