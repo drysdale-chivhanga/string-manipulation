@@ -367,12 +367,21 @@ namespace Drysdale.String.Manipulation
         /// GetRandomAlphaNumeralString
         /// </summary>
         /// <param name="stringLength"></param>
-        /// <returns></returns>
+        /// <returns>RandomAlphaNumeralString</returns>
+        /// <remarks>
+        /// Maximum Of 24 Charactors
+        /// </remarks>
         public static string GetRandomAlphaNumeralString(int stringLength)
         {
             int numOfLetters = stringLength / 2;
             int numOfNumbers = stringLength - numOfLetters;
-
+            if (numOfNumbers > 9)
+            {
+                numOfNumbers = 9;
+                numOfLetters = stringLength - numOfNumbers;
+                if (numOfLetters > 15)
+                    numOfLetters = 15;
+            }
             string theLetaz = GetCharactors(numOfLetters, Fzd_Def_String.GetAlbhabetChars);
             int theDigits = numOfNumbers switch
             {

@@ -3,9 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>quick_console_ui_tester</RootNamespace>
+    <RootNamespace>Drysdale.QuickConsoleUiTester</RootNamespace>
+    <UserSecretsId>dc47804e-4cac-4652-9aff-5444dca0d4fa</UserSecretsId>
   </PropertyGroup>
 
-    <PackageReference Include="Drysdale.StringManipulation" Version="1.1.2" />
+  <ItemGroup>
+    <PackageReference Include="Drysdale.StringManipulation" Version="1.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+  </ItemGroup>
 
 </Project>
