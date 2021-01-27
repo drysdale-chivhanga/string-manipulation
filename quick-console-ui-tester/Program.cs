@@ -1,7 +1,7 @@
 ﻿using Drysdale.String.Manipulation;
 using System;
 
-namespace quick_console_ui_tester
+namespace Drysdale.QuickConsoleUiTester
 {
     class Program
     {
@@ -14,7 +14,7 @@ namespace quick_console_ui_tester
 
             //string code = "Drysdale Chivhanga";
 
-            Console.WriteLine(StringManip.GetRandomAlphaNumeralString(18));
+           Console.WriteLine(StringManip.GetRandomAlphaNumeralString(26));
         }
     }
 }
