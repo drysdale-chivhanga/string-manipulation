@@ -151,14 +151,14 @@ namespace Drysdale.String.Manipulation
         {
             string distinctValue = GetDistinctWithoutSpaces(incVal, CharactorDistinction.CapitalAndSmallAreTwo);
             int distinctLength = distinctValue.Length;
-            string response="";
+            StringBuilder response = new StringBuilder();
             if (distinctLength > sizeOfString)
             {
                 int i = 0;
                 while (i < sizeOfString)
                 {
                     char thisChar = GetCharactor(incVal);
-                    if (response.Contains(thisChar))
+                    if (response.ToString().Contains(thisChar))
                         continue;
                     response.Append(thisChar);
                     i++;
@@ -167,7 +167,7 @@ namespace Drysdale.String.Manipulation
             else
             {
                 if (distinctLength == sizeOfString)
-                    response = distinctValue;
+                    response.Append(distinctValue);
                 else
                 {
                     int remainingChars = sizeOfString - distinctLength;
@@ -176,17 +176,17 @@ namespace Drysdale.String.Manipulation
                         response.Append(item);
                     }
                     int i = 0;
-                    while (i<remainingChars)
+                    while (i < remainingChars)
                     {
                         char thisChar = GetGetRandomLetter(CharactorCase.Lower);
-                        if (response.Contains(thisChar))
+                        if (response.ToString().Contains(thisChar))
                             continue;
                         response.Append(thisChar);
                         i++;
                     }
                 }
             }
-            return response;
+            return response.ToString();
         }
 
 
@@ -362,23 +362,33 @@ namespace Drysdale.String.Manipulation
         }
         #endregion
 
-        #region GetRandom08AlphaNumerals...
+        #region GetRandomAlphaNumeralString...
         /// <summary>
-        /// GetRandom08AlphaNumerals
+        /// GetRandomAlphaNumeralString
         /// </summary>
-        /// <remarks>
-        /// Can Be Used To Get A Random 8 Letter Password
-        /// </remarks>
-        public static string GetRandom08AlphaNumerals
+        /// <param name="stringLength"></param>
+        /// <returns></returns>
+        public static string GetRandomAlphaNumeralString(int stringLength)
         {
-            get
+            int numOfLetters = stringLength / 2;
+            int numOfNumbers = stringLength - numOfLetters;
+
+            string theLetaz = GetCharactors(numOfLetters, Fzd_Def_String.GetAlbhabetChars);
+            int theDigits = numOfNumbers switch
             {
-                string drysChiv = $"{Fzd_Def_String.GetFirstNameChars}{Fzd_Def_String.GetSurnameChars}";
-                string threeLetaz = GetCharactors(3, drysChiv);
-                int fiveDigits = NumberManip.GetNumber(10000, 99999);
-                string fullDummyPassword = $"{fiveDigits}{GetCapitalLetters(threeLetaz)}";
-                return GetShuffledString(fullDummyPassword);
-            }
+                1 => NumberManip.GetNumber(0, 9),
+                2 => NumberManip.GetNumber(10, 99),
+                3 => NumberManip.GetNumber(100, 999),
+                4 => NumberManip.GetNumber(1000, 9999),
+                5 => NumberManip.GetNumber(10000, 99999),
+                6 => NumberManip.GetNumber(100000, 999999),
+                7 => NumberManip.GetNumber(1000000, 9999999),
+                8 => NumberManip.GetNumber(10000000, 99999999),
+                _ => NumberManip.GetNumber(100000000, 999999999),
+            };
+            string fullDummyPassword = $"{theDigits}{GetCapitalLetters(theLetaz)}";
+            return GetShuffledString(fullDummyPassword);
+
         }
         #endregion
 

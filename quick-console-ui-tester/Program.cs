@@ -14,7 +14,7 @@ namespace quick_console_ui_tester
 
             //string code = "Drysdale Chivhanga";
 
-            Console.WriteLine(StringManip.GetGetRandomLetter(CharactorCase.Lower));
+            Console.WriteLine(StringManip.GetRandomAlphaNumeralString(18));
         }
     }
 }
