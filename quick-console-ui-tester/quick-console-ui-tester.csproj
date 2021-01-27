@@ -6,8 +6,6 @@
     <RootNamespace>quick_console_ui_tester</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\drysdale-string-manipulation\drysdale-string-manipulation.csproj" />
-  </ItemGroup>
+    <PackageReference Include="Drysdale.StringManipulation" Version="1.1.2" />
 
 </Project>
